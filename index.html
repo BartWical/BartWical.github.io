@@ -417,13 +417,13 @@ a:hover{text-decoration:underline;}
 
   <div class="sub-page active" id="sp-acct">
     <div class="stat-grid">
-      <div class="stat"><div class="stat-lbl">total realized P&amp;L</div><div class="stat-val g">$4,160.72</div></div>
-      <div class="stat"><div class="stat-lbl">avg per account</div><div class="stat-val g">$277.38</div></div>
-      <div class="stat"><div class="stat-lbl">accounts</div><div class="stat-val">15</div></div>
+      <div class="stat"><div class="stat-lbl">total realized P&amp;L</div><div class="stat-val g">$4,476.70</div></div>
+      <div class="stat"><div class="stat-lbl">avg per account</div><div class="stat-val g">$344.36</div></div>
+      <div class="stat"><div class="stat-lbl">accounts</div><div class="stat-val">13</div></div>
       <div class="stat"><div class="stat-lbl">instrument</div><div class="stat-val">MNQ</div></div>
       <div class="stat"><div class="stat-lbl">contract</div><div class="stat-val">06-26</div></div>
     </div>
-    <div class="ts-label">As of 5/20/2026 13:01 &nbsp;&middot;&nbsp; 20-May snapshot &nbsp;&middot;&nbsp; All accounts flat at time of capture</div>
+    <div class="ts-label">As of 5/22/2026 12:56 &nbsp;&middot;&nbsp; 22-May snapshot &nbsp;&middot;&nbsp; All accounts flat at time of capture</div>
     <div class="tbl-wrap">
     <table class="atbl">
       <thead><tr>
@@ -433,24 +433,32 @@ a:hover{text-decoration:underline;}
       </tr></thead>
       <tbody id="acct-tbody"></tbody>
       <tfoot>
-        <tr class="total-row"><td>total</td><td></td><td></td><td></td><td></td><td></td><td style="color:#4caf79;">$4,160.72</td><td></td><td></td><td></td><td></td></tr>
-        <tr class="avg-row"><td>average &nbsp;5/20/2026 13:01</td><td></td><td></td><td></td><td></td><td></td><td>$277.38</td><td></td><td></td><td></td><td></td></tr>
+        <tr class="total-row"><td>total</td><td></td><td></td><td></td><td></td><td></td><td style="color:#4caf79;">$4,476.70</td><td></td><td></td><td></td><td></td></tr>
+        <tr class="avg-row"><td>average &nbsp;5/22/2026 12:56</td><td></td><td></td><td></td><td></td><td></td><td>$344.36</td><td></td><td></td><td></td><td></td></tr>
       </tfoot>
     </table>
     </div>
 
     <div class="screenshots">
       <div class="section-label" style="margin-top:2rem;">session screenshots</div>
+
       <div class="screenshot-item">
-        <div class="screenshot-caption">13:01 snapshot — initial session (total $4,160.72)</div>
+        <div class="screenshot-caption">5/22/2026 12:56 — 13 accounts, total $4,476.70 avg $344.36</div>
+        <img src="1779484787670_image.png" alt="Account performance snapshot 5/22/2026 12:56 showing 13 accounts with total realized PNL of $4,476.70">
+      </div>
+
+      <div class="screenshot-item">
+        <div class="screenshot-caption">5/20/2026 13:01 — 15 accounts, total $4,160.72 avg $277.38</div>
         <img src="results-snapshot-1.png" alt="Account performance snapshot 5/20/2026 13:01">
       </div>
+
       <div class="screenshot-item">
-        <div class="screenshot-caption">13:25 live reports — MNQ 06-26 filtered (total $4,405.94)</div>
+        <div class="screenshot-caption">5/20/2026 13:25 live reports — MNQ 06-26 filtered, total $4,405.94</div>
         <img src="results-live-reports.png" alt="Live reports MNQ 06-26 filtered $4,405.94">
       </div>
+
       <div class="screenshot-item">
-        <div class="screenshot-caption">13:35 concurrent testing — all contracts (Bart Trade Web App)</div>
+        <div class="screenshot-caption">5/20/2026 13:35 concurrent testing — all contracts (Bart Trade Web App)</div>
         <img src="results-concurrent-testing.png" alt="Concurrent testing all contracts 1:35 PM">
       </div>
     </div>
@@ -667,21 +675,19 @@ function onDiscProceed(){
 
 // ── Account data ────────────────────────────────────────────────────
 var accts=[
-  {a:'BX28-R518', lwm:97137.04, hwm:101910.27,bal:101856.44,thr:98910.27, pct:98, pnl:562.98, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX31-R613', lwm:147784.97,hwm:154381.57,bal:154327.74,thr:149381.57,pct:98, pnl:464.92, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX45-R618', lwm:24814.42, hwm:26198.37, bal:26144.54, thr:24698.37, pct:96, pnl:415.02, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX46-R618', lwm:24894.44, hwm:26231.19, bal:26178.36, thr:24731.19, pct:96, pnl:244.46, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX47-R618', lwm:24902.30, hwm:26557.34, bal:26512.12, thr:25057.34, pct:96, pnl:393.48, atm:'400,200',it:1500,ts:35,pb:'1x',hi:true},
-  {a:'BX48-R619', lwm:24943.17, hwm:25606.43, bal:25553.60, thr:24106.43, pct:96, pnl:497.96, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX49-R619', lwm:24943.67, hwm:25431.93, bal:25378.10, thr:23931.93, pct:96, pnl:313.46, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX50-R619', lwm:24943.17, hwm:25662.99, bal:25609.16, thr:24162.99, pct:96, pnl:547.30, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX51-R620', lwm:24722.28, hwm:25188.65, bal:25134.82, thr:23688.65, pct:96, pnl:134.82, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX52-R620', lwm:24722.28, hwm:25182.37, bal:25128.54, thr:23682.37, pct:96, pnl:128.54, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX34-R615', lwm:149995.39,hwm:150493.11,bal:150439.78,thr:145493.11,pct:98, pnl:439.78, atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX35-R620', lwm:25000.00, hwm:25000.00, bal:25000.00, thr:23500.00, pct:100,pnl:0,       atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX36-R620', lwm:25000.00, hwm:25000.00, bal:25000.00, thr:23500.00, pct:100,pnl:0,       atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'BX37-R620', lwm:25000.00, hwm:25000.00, bal:25000.00, thr:23500.00, pct:100,pnl:0,       atm:'400,200',it:1500,ts:35,pb:'1x',hi:false},
-  {a:'Playback101',lwm:99998.50,hwm:100020.50,bal:100018.00,thr:97020.50, pct:99, pnl:18.00,   atm:'300,300',it:1200,ts:50,pb:'stopped',hi:false},
+  {a:'BX28-R518', lwm:97137.04,  hwm:102731.04, bal:102731.04, thr:99731.04,  pct:100, pnl:364.66, atm:'300,300',it:1500,ts:30,pb:'1x',hi:true},
+  {a:'BX31-R613', lwm:147784.97, hwm:155123.55, bal:155117.94, thr:150123.55, pct:99,  pnl:417.44, atm:'300,300',it:1500,ts:30,pb:'1x',hi:false},
+  {a:'BX45-R618', lwm:24814.42,  hwm:26673.70,  bal:26673.70,  thr:25173.70,  pct:100, pnl:297.38, atm:'300,300',it:1500,ts:30,pb:'1x',hi:true},
+  {a:'BX46-R618', lwm:24894.44,  hwm:26643.84,  bal:26643.84,  thr:25143.84,  pct:100, pnl:263.10, atm:'300,300',it:1500,ts:30,pb:'1x',hi:true},
+  {a:'BX48-R619', lwm:24943.17,  hwm:26190.31,  bal:26184.70,  thr:24690.31,  pct:99,  pnl:384.44, atm:'300,300',it:1500,ts:30,pb:'1x',hi:false},
+  {a:'BX49-R619', lwm:24829.17,  hwm:25964.47,  bal:25957.36,  thr:24464.47,  pct:99,  pnl:383.66, atm:'300,300',it:1500,ts:30,pb:'1x',hi:false},
+  {a:'BX50-R619', lwm:24943.17,  hwm:26193.30,  bal:26189.76,  thr:24693.30,  pct:99,  pnl:374.44, atm:'300,300',it:1500,ts:30,pb:'1x',hi:false},
+  {a:'BX51-R620', lwm:24587.17,  hwm:25773.14,  bal:25767.60,  thr:24273.14,  pct:99,  pnl:371.44, atm:'300,300',it:1500,ts:30,pb:'1x',hi:false},
+  {a:'BX52-R620', lwm:24579.89,  hwm:25845.20,  bal:25845.20,  thr:24345.20,  pct:100, pnl:370.44, atm:'300,300',it:1500,ts:30,pb:'1x',hi:true},
+  {a:'BX34-R615', lwm:149944.85, hwm:151301.66, bal:151301.66, thr:146301.66, pct:100, pnl:334.20, atm:'300,300',it:1500,ts:30,pb:'1x',hi:true},
+  {a:'BX35-R620', lwm:24506.13,  hwm:25803.62,  bal:25801.08,  thr:24303.62,  pct:99,  pnl:333.20, atm:'300,300',it:1500,ts:30,pb:'1x',hi:false},
+  {a:'BX36-R620', lwm:24490.41,  hwm:25652.66,  bal:25652.66,  thr:24152.66,  pct:100, pnl:287.54, atm:'300,300',it:1500,ts:30,pb:'1x',hi:true},
+  {a:'BX37-R620', lwm:24532.13,  hwm:25674.86,  bal:25674.86,  thr:24174.86,  pct:100, pnl:294.76, atm:'300,300',it:1500,ts:30,pb:'1x',hi:true},
 ];
 function n(v){return v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
 function p(v){return v===0?'&mdash;':'$'+n(v);}
