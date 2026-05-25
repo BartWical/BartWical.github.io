@@ -262,10 +262,49 @@ a:hover{text-decoration:underline;}
   <div class="teaser-chip">&#9670; Coming 5/25 &nbsp;&mdash;&nbsp; PASSnExit fix drop</div>
 
   <!-- TOOLS GRID -->
+
+  <!-- BACKUP WARNING -->
+  <div class="note-box" style="margin-bottom:1.5rem;border-left:4px solid #c8891f;background:#1a1200;padding:1rem 1.25rem;">
+    <div style="color:#c8891f;font-weight:700;font-size:15px;margin-bottom:0.4rem;">&#9888;&nbsp; Back Up Before You Import</div>
+    <div style="color:#aaa;font-size:13px;line-height:1.6;">
+      Before importing any NinjaScript code &mdash; mine or anyone else&rsquo;s &mdash; back up your
+      <code style="background:#111;padding:1px 5px;border-radius:3px;">Documents\NinjaTrader 8</code> folder first.
+      Run <strong style="color:#e0e0e0;">BackupCode.ps1</strong> (one click from PowerShell)
+      or zip the folder manually. It captures all source code, templates, ATM strategies,
+      sounds, and persistent state &mdash; everything needed to recover from a bad import.
+      <br><br>
+      <strong style="color:#e0e0e0;">BackupCode.ps1</strong> lives in
+      <code style="background:#111;padding:1px 5px;border-radius:3px;">Documents\NinjaTrader 8\bin\</code>
+      &mdash; <a href="https://github.com/auldin-solutions/bart-trade-indicators/blob/main/BackupCode.ps1" style="color:#5b9bd5;">download from GitHub</a>.
+    </div>
+  </div>
+
   <div class="section-label">available tools</div>
+
+  <div class="note-box" style="margin-bottom:1.5rem;border-left:3px solid #2a5c8c;background:#0d1e35;padding:0.875rem 1.25rem;">
+    <strong style="color:#5b9bd5;">Two deployment paths:</strong>
+    <span style="color:#777;"> &nbsp;&#9632;&nbsp; <strong style="color:#ccc;">Standalone</strong> — compiles and runs independently. No BTI required. Suitable for sharing and distribution. &nbsp;&#9632;&nbsp; <strong style="color:#ccc;">BTI-enabled</strong> — requires Bart Trade Interface. Moves orders directly via BTI's trade management layer, preserving OCO group integrity and stop management. Tools marked <span style="background:#0d2d14;color:#4caf79;padding:1px 6px;border-radius:3px;font-size:11px;">BTI</span> require the full BTI stack.</span>
+  </div>
+
   <div class="tools-grid">
 
-    <div class="tool-card">
+        <div class="tool-card">
+      <div class="tool-icon" style="color:#c8891f;">&#128190;</div>
+      <div class="tool-name">BackupCode.ps1</div>
+      <div class="tool-tagline">One script. Full backup. Run it first.</div>
+      <div class="tool-desc">Backs up everything that matters in your NinjaTrader 8 folder &mdash; all source code (.cs, .ps1, .json), templates, ATM strategies, sounds, and persistent state logs.<br><br>
+        Place in <code style="background:#111;padding:1px 4px;border-radius:3px;">Documents\NinjaTrader 8\bin\</code> and run before importing any code. Creates a timestamped backup under <code style="background:#111;padding:1px 4px;border-radius:3px;">Documents\NinjaTrader-Bin-Backups\</code> &mdash; non-destructive, append-only.<br><br>
+        <strong>No dependencies. No install. Just run it.</strong></div>
+      <div class="tool-footer">
+        <span class="tag tag-free">free</span>
+        <a href="https://github.com/auldin-solutions/bart-trade-indicators/blob/main/BackupCode.ps1"
+           style="font-size:11px;color:#5b9bd5;text-decoration:none;border:1px solid #1a3a5c;padding:2px 8px;border-radius:3px;">
+          &#128279; GitHub
+        </a>
+      </div>
+    </div>
+
+<div class="tool-card">
       <div class="tool-icon" style="color:#5b9bd5;">&#9632;</div>
       <div class="tool-name">MACnCheese AddOn</div>
       <div class="tool-tagline">MACD-based signal filtering for funded accounts</div>
@@ -273,18 +312,22 @@ a:hover{text-decoration:underline;}
       <div class="tool-footer">
         <span class="tag tag-paid">$100/mo</span>
         <span class="tag tag-free-aff">free w/ Bulenox</span>
+        <span style="font-size:10px;padding:2px 8px;border-radius:3px;background:#0d2d14;color:#4caf79;border:1px solid #1a5c2a;">BTI</span>
       </div>
     </div>
 
     <div class="tool-card">
       <div class="tool-icon" style="color:#4caf79;">&#9675;</div>
-      <div class="tool-name">PASSnExit AddOn</div>
-      <div class="tool-tagline">Hit your target. Get out clean.</div>
-      <div class="tool-desc">Monitors eval and funded account cash targets. Auto-flattens positions and cancels orders the moment a pass target is hit. Configurable per account — never blow past your daily profit target again.<br><br><strong style="color:#c8891f;">Fix dropping 5/25 — improved exit precision and state handling.</strong></div>
+      <div class="tool-name">ProfitTargetPerAccount AddOn</div>
+      <div class="tool-tagline" style="color:#4caf79;">NEW — 5/23 &nbsp;&#9670;&nbsp; Hit your target. Get out clean.</div>
+      <div class="tool-desc">Monitors eval and funded account profit targets tick-by-tick — including unrealized P&L — and moves your profit target order to lock in a pass the moment you cross the threshold.<br><br>
+        Closes a funded futures <strong>eval account</strong> just above profit target. Also supports <strong>Performance/Master accounts</strong> with a configurable daily dollar profit target.<br><br>
+        Tested with Playback. Live account testing begins 5/24. Expected general availability 5/25 — testing must prove out first.<br><br>
+        <strong>Two versions:</strong> standalone (no dependencies) and BTI-enabled (moves Target1 order directly via Bart Trade Interface).</div>
       <div class="tool-footer">
         <span class="tag tag-paid">$100/mo</span>
         <span class="tag tag-free-aff">free w/ Bulenox</span>
-        <span class="tag tag-coming">fix 5/25</span>
+        <span class="tag tag-coming">GA 5/25</span>
       </div>
     </div>
 
